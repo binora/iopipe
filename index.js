@@ -115,8 +115,8 @@ function _make_generateLog(emitter, func, start_time, config, context) {
       },
       function(reqErr, res, body) {
         // Throw uncaught errors from the wrapped function.
-        if (err) {
-          context.fail(err)
+        if (reqErr) {
+          context.fail(reqErr)
         }
         /*if (reqErr) {
           console.log("WOLF:IOpipeLoggingError: ", reqErr)
